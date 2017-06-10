@@ -1,0 +1,44 @@
+﻿<?xml version="1.0"?>
+
+<world>
+  <location name="Haddons Cafe" desc="a popular coffee place" id="haddons-cafe">
+    <path direction="right" name="to EN Building" desc="a red brick road with trees">
+      <destination>enlvl1</destination>
+    </path>
+    <player name="Desperate" desc="a student in the exam period">
+      <inventory>
+        <item
+          id="studentid"
+          name="student ID card"
+          desc="that card you should never lose or you will get a 30-dollar penalty" />
+      </inventory>
+    </player>
+    <inventory>
+      <item
+        id="cappuchino-coffee-drink"
+        name="cappuchino"
+        desc="a kind of coffee" />
+      <item
+        id="english breakfast-tea-drink"
+        name="english breakfast"
+        desc="a kind of tea" />
+    </inventory>
+    <npc name="barista" desc="that person who makes coffee and tea" />
+  </location>
+
+  <location name="EN Building Level 1" desc="that Swinburne building for engineer" id="enlvl1">
+    <path direction="up" name="to Level 2 of EN building" desc="an old elevator">
+      <destination>enlvl2</destination>
+    </path>
+    <inventory>
+      <item id="xanax-medicine" name="xanax" desc="destress med for students doing finals" />
+    </inventory>
+  </location>
+
+  <location name="EN Building Level 2" desc="" id="enlvl2">
+    <path direction="down" name="to Level 1 of EN building" desc="an old elevator">
+      <destination>enlvl1</destination>
+    </path>
+    <npc name="random student" desc="who looks terrified" />
+  </location>
+</world>
