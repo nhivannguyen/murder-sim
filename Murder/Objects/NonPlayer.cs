@@ -30,7 +30,7 @@ namespace MurderSim.Objects
 
 		public string Talk(Character chr)
 		{
-			return $"I have nothing to say to you, {chr.Name}";
+			return $"{Name} said: I have nothing to say to you, {chr.Name}\r";
 		}
 	}
 }

@@ -15,7 +15,7 @@ namespace MurderSim.Commands
 			_cmdList.Add(new MoveCmd());
 			_cmdList.Add(new TalkCmd());
 
-			_splitIds = userinput.Split();
+			_splitIds = userinput.ToLower().Split();
 		}
 
 		public Cmd Command

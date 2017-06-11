@@ -4,7 +4,7 @@ namespace MurderSim.Objects
 {
 	public abstract class Character : GameObject, IInventory
 	{
-		protected Character(string name, string desc) : base(new[] {name, "inventory"}, name, desc)
+		protected Character(string name, string desc) : base(new[] {name.ToLower(), "inventory"}, name, desc)
 		{
 		}
 		

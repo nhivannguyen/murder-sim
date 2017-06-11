@@ -23,12 +23,17 @@ namespace MurderSimForm
 	        _player = _god.CreatesPlayer();
 	        dispBox.Text = $"Welcome to this world, {_player.Name}.\r" +
 	                       $"Just confirming, you are {_player.FullDescription}\r";
+	        nameData.Text = _player.Name;
+	        locData.Text = $"{_player.Location.Name}, {_player.Location.Description}";
+	        invenData.Text = _player.Inventory.ItemList;
         }
 
 		private void enterButt_Click(object sender, EventArgs e)
 		{
-			dispBox.Text += $"{inputBox.Text}\r\n{_god.FulfillRequestTo(inputBox.Text, _player)}";
+			dispBox.Text += $"{inputBox.Text} \r-> {_god.FulfillRequestTo(inputBox.Text, _player)}";
 			inputBox.Text = "";
+			locData.Text = $"{_player.Location.Name}, {_player.Location.Description}";
+			invenData.Text = _player.Inventory.ItemList;
 		}
 	}
 }

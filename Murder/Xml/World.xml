@@ -35,10 +35,10 @@
     </inventory>
   </location>
 
-  <location name="EN Building Level 2" desc="" id="enlvl2">
+  <location name="EN Building Level 2" desc="that Swinburne building for engineer" id="enlvl2">
     <path direction="down" name="to Level 1 of EN building" desc="an old elevator">
       <destination>enlvl1</destination>
     </path>
-    <npc name="random student" desc="who looks terrified" />
+    <npc name="Stress" desc="who looks terrified" />
   </location>
 </world>

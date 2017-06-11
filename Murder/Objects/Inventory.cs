@@ -14,7 +14,7 @@ namespace MurderSim.Objects
 			{
 				string ListItem = "";
 				foreach (Item item in _items)
-					ListItem += item.ShortDescription + "\n ";
+					ListItem += "- " + item.ShortDescription + "\n ";
 				return ListItem;
 			}
 		}

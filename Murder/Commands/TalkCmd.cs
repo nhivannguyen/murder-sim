@@ -15,7 +15,7 @@ namespace MurderSim.Commands
 				if (text[2 - 1] != "to")
 					return "Who do you want to talk to?";
 
-				NonPlayer target = chr.Location.FindChar(text[3 - 1]);
+				NonPlayer target = chr.Location.FindChar(text[3 - 1].ToLower());
 
 				if (target == null)
 					return "This person is not in this room.";

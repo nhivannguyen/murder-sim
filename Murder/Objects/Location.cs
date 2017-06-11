@@ -59,7 +59,7 @@ namespace MurderSim.Objects
 		{
 			string result = "";
 			foreach (Path path in _paths)
-				result += $"a path {path.Name}, {path.FullDescription}\n";
+				result += $"+ a path {path.Name}, {path.FullDescription}\n ";
 			return result;
 		}
 
@@ -71,7 +71,7 @@ namespace MurderSim.Objects
 		public NonPlayer FindChar(string id)
 		{
 			foreach (NonPlayer character in PresentChar)
-				if (character.Name == id)
+				if (character.Name.ToLower() == id)
 					return character;
 			return null;
 		}
@@ -80,7 +80,7 @@ namespace MurderSim.Objects
 		{
 			string greet = "";
 			foreach (NonPlayer npc in PresentChar)
-				greet += $"{npc.Name} said: {npc.Greet()}\n\r";
+				greet += $"{npc.Name} said: {npc.Greet()}\r";
 			return greet;
 		}
 	}

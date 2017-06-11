@@ -95,31 +95,37 @@ namespace MurderSim.Objects
 		{
 			XmlNodeList npcNodeList = _theBible.GetElementsByTagName("npc");
 			foreach (XmlNode npcNode in npcNodeList)
-			foreach (Location aLoc in _locations)
-				if (aLoc.FirstId == npcNode.ParentNode.Attributes["id"].Value.Split('-').First())
-					aLoc.PresentChar.Add(new NonPlayer(
-						npcNode.Attributes["name"].Value,
-						npcNode.Attributes["desc"].Value
-					));
+			{
+				foreach (Location aLoc in _locations)
+				{
+					if (aLoc.FirstId == npcNode.ParentNode.Attributes["id"].Value.Split('-').First())
+					{
+						new NonPlayer(npcNode.Attributes["name"].Value, npcNode.Attributes["desc"].Value) {Location = aLoc};
+					}
+				}
+			}
 		}
 
 		private void CreatesPathsFromXml()
 		{
 			XmlNodeList pathNodeList = _theBible.GetElementsByTagName("path");
-			Location hasPath = null;
-			foreach (Location aLoc in _locations)
+			Location hasPath;
 			foreach (XmlNode pathNode in pathNodeList)
 			{
-				hasPath = _locations.Find(l => l.AreYou(pathNode.ParentNode.Attributes["id"].Value.Split('-').First()));
-				if (aLoc.AreYou(pathNode.SelectSingleNode("destination").InnerText))
-						//TODO: 
-					hasPath.AddPath(new Path
-					(
-						pathNode.Attributes["direction"].Value.Split('-'),
-						pathNode.Attributes["name"].Value,
-						pathNode.Attributes["desc"].Value,
-						aLoc
-					));
+				foreach (Location aLoc in _locations)
+				{
+					hasPath = _locations.Find(l => l.AreYou(pathNode.ParentNode.Attributes["id"].Value.Split('-').First()));
+					if (aLoc.AreYou(pathNode.SelectSingleNode("destination").InnerText) && aLoc != hasPath)
+					{
+						hasPath.AddPath(new Path
+						(
+							pathNode.Attributes["direction"].Value.Split('-'),
+							pathNode.Attributes["name"].Value,
+							pathNode.Attributes["desc"].Value,
+							aLoc
+						));
+					}
+				}
 			}
 		}
 	}

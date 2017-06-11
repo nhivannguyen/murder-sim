@@ -34,11 +34,11 @@
 			this.locationLb = new System.Windows.Forms.Label();
 			this.dispBox = new System.Windows.Forms.RichTextBox();
 			this.inventoryLb = new System.Windows.Forms.Label();
-			this.name = new System.Windows.Forms.TextBox();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.nameData = new System.Windows.Forms.TextBox();
+			this.locData = new System.Windows.Forms.TextBox();
+			this.invenData = new System.Windows.Forms.TextBox();
 			this.targetLb = new System.Windows.Forms.Label();
-			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.targetData = new System.Windows.Forms.TextBox();
 			this.SuspendLayout();
 			// 
 			// inputBox
@@ -109,34 +109,34 @@
 			this.inventoryLb.TabIndex = 6;
 			this.inventoryLb.Text = "Inventory";
 			// 
-			// name
+			// nameData
 			// 
-			this.name.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.name.Location = new System.Drawing.Point(886, 37);
-			this.name.Name = "name";
-			this.name.ReadOnly = true;
-			this.name.Size = new System.Drawing.Size(192, 31);
-			this.name.TabIndex = 8;
+			this.nameData.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nameData.Location = new System.Drawing.Point(886, 37);
+			this.nameData.Name = "nameData";
+			this.nameData.ReadOnly = true;
+			this.nameData.Size = new System.Drawing.Size(192, 31);
+			this.nameData.TabIndex = 8;
 			// 
-			// textBox2
+			// locData
 			// 
-			this.textBox2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox2.Location = new System.Drawing.Point(886, 239);
-			this.textBox2.Multiline = true;
-			this.textBox2.Name = "textBox2";
-			this.textBox2.ReadOnly = true;
-			this.textBox2.Size = new System.Drawing.Size(192, 139);
-			this.textBox2.TabIndex = 9;
+			this.locData.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.locData.Location = new System.Drawing.Point(886, 239);
+			this.locData.Multiline = true;
+			this.locData.Name = "locData";
+			this.locData.ReadOnly = true;
+			this.locData.Size = new System.Drawing.Size(192, 139);
+			this.locData.TabIndex = 9;
 			// 
-			// textBox3
+			// invenData
 			// 
-			this.textBox3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox3.Location = new System.Drawing.Point(886, 415);
-			this.textBox3.Multiline = true;
-			this.textBox3.Name = "textBox3";
-			this.textBox3.ReadOnly = true;
-			this.textBox3.Size = new System.Drawing.Size(192, 205);
-			this.textBox3.TabIndex = 10;
+			this.invenData.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.invenData.Location = new System.Drawing.Point(886, 415);
+			this.invenData.Multiline = true;
+			this.invenData.Name = "invenData";
+			this.invenData.ReadOnly = true;
+			this.invenData.Size = new System.Drawing.Size(192, 205);
+			this.invenData.TabIndex = 10;
 			// 
 			// targetLb
 			// 
@@ -148,15 +148,15 @@
 			this.targetLb.TabIndex = 11;
 			this.targetLb.Text = "Target(s)";
 			// 
-			// textBox4
+			// targetData
 			// 
-			this.textBox4.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.textBox4.Location = new System.Drawing.Point(886, 105);
-			this.textBox4.Multiline = true;
-			this.textBox4.Name = "textBox4";
-			this.textBox4.ReadOnly = true;
-			this.textBox4.Size = new System.Drawing.Size(192, 92);
-			this.textBox4.TabIndex = 12;
+			this.targetData.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.targetData.Location = new System.Drawing.Point(886, 105);
+			this.targetData.Multiline = true;
+			this.targetData.Name = "targetData";
+			this.targetData.ReadOnly = true;
+			this.targetData.Size = new System.Drawing.Size(192, 92);
+			this.targetData.TabIndex = 12;
 			// 
 			// MurderWinForm
 			// 
@@ -164,11 +164,11 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
 			this.ClientSize = new System.Drawing.Size(1090, 632);
-			this.Controls.Add(this.textBox4);
+			this.Controls.Add(this.targetData);
 			this.Controls.Add(this.targetLb);
-			this.Controls.Add(this.textBox3);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.name);
+			this.Controls.Add(this.invenData);
+			this.Controls.Add(this.locData);
+			this.Controls.Add(this.nameData);
 			this.Controls.Add(this.inventoryLb);
 			this.Controls.Add(this.dispBox);
 			this.Controls.Add(this.locationLb);
@@ -190,11 +190,11 @@
         private System.Windows.Forms.Label locationLb;
         private System.Windows.Forms.RichTextBox dispBox;
 		private System.Windows.Forms.Label inventoryLb;
-		private System.Windows.Forms.TextBox name;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.TextBox nameData;
+		private System.Windows.Forms.TextBox locData;
+		private System.Windows.Forms.TextBox invenData;
 		private System.Windows.Forms.Label targetLb;
-		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.TextBox targetData;
 	}
 }
 

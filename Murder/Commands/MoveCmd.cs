@@ -38,11 +38,13 @@ namespace MurderSim.Commands
 		private string Move(Player chr, string direction)
 		{
 			Path path = (Path) chr.Locate(direction);
+			if (path == null)
+				return $"This location does not have a path that goes {direction}\r";
 			if (chr.Location == path.Destination)
-				return $"{chr.Name} can't move {direction} as we have arrived the last location of this direction.";
+				return $"{chr.Name} can't move {direction} as we have arrived the last location of this direction.\r";
 			path.Move(chr);
 
-			return $"{chr.Name} moved {direction} and arrived {chr.Location.Name}.\r {chr.Location.UponEnter()}";
+			return $"{chr.Name} moved {direction} and arrived {chr.Location.Name}.\r{chr.Location.UponEnter()}";
 		}
 	}
 }
