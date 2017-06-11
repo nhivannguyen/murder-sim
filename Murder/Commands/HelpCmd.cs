@@ -1,22 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MurderSim.Objects;
+﻿using MurderSim.Objects;
 
 namespace MurderSim.Commands
 {
 	public class HelpCmd : Cmd
 	{
-		public HelpCmd() : base(new[] { "help" }) { }
+		public HelpCmd() : base(new[] {"help"})
+		{
+		}
 
 		public override string Execute(Player p, string[] input)
 		{
 			if (input[1 - 1] == "help")
 			{
 				if (input.Length == 1)
-					return 
+				{
+					return
 						"COMMAND LISTS\r" +
 						"~> move <path-direction> : move yourself to the destination of the path\r" +
 						"~> put <item-id> : find item you have and add them to your inventory\r" +
@@ -28,17 +26,18 @@ namespace MurderSim.Commands
 						"~> look at <item> in <location> : get details of the item at that location\r" +
 						"~> talk to <someone> : communicate with an NPC\r" +
 						"~> murder <someone> : remove them from the world\r";
+				}
 				if (input.Length == 2)
 				{
 					switch (input[2 - 1])
 					{
 						case "put":
 							return "PUT COMMAND LISTS\r" +
-								   "~> put <item-id> : find item you have and add them to your inventory\r" +
-								   "~> put <item-id> to <location-name> : find item you have and leave it the location\r";
+							       "~> put <item-id> : find item you have and add them to your inventory\r" +
+							       "~> put <item-id> to <location-name> : find item you have and leave it the location\r";
 						case "move":
 							return "MOVE COMMAND LISTS\r" +
-								"~> move <path-direction> : move yourself to the destination of the path\r";
+							       "~> move <path-direction> : move yourself to the destination of the path\r";
 						case "take":
 							return "TAKE COMMAND LIST\r";
 						case "look":
@@ -48,7 +47,6 @@ namespace MurderSim.Commands
 						case "murder":
 							return "MURDER COMMAND LIST\r";
 					}
-
 				}
 			}
 

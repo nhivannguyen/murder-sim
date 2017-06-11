@@ -31,8 +31,12 @@ namespace MurderSim.Commands
 		public Cmd FindCmd()
 		{
 			foreach (Cmd cmd in _cmdList)
+			{
 				if (cmd.AreYou(_splitIds[0]))
+				{
 					return cmd;
+				}
+			}
 			return null;
 		}
 
@@ -40,7 +44,9 @@ namespace MurderSim.Commands
 		{
 			Cmd cmd = FindCmd();
 			if (cmd == null)
+			{
 				return "I don't understand this command.";
+			}
 			return cmd.Execute(chr, _splitIds);
 		}
 	}

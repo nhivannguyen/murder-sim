@@ -2,17 +2,16 @@
 {
 	public class Path : GameObject
 	{
-		public Path(string[] ids, string name, string desc, Location dest) : base(ids, name, desc)
-		{
-			Destination = dest;
-		}
+		public Path(string[] ids, string name, string desc, Location dest) : base(ids, name, desc) => Destination = dest;
 
 		public Location Destination { get; set; }
 
 		public void Move(Character character)
 		{
 			if (character.Location != Destination)
+			{
 				character.Location = Destination;
+			}
 		}
 	}
 }

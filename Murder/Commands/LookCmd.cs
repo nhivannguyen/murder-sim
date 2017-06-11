@@ -28,25 +28,43 @@ namespace MurderSim.Commands
 			if (text.Length == 2 || text.Length == 3 || text.Length == 5)
 			{
 				if (text.Length == 3)
+				{
 					thingId = text[3 - 1];
+				}
 				if (text[1 - 1].ToLower() != "look")
+				{
 					return "Error in look input.";
+				}
 				if (text[2 - 1] == "around")
+				{
 					return chr.Location.FullDescription;
+				}
 				if (text[2 - 1].ToLower() != "at")
+				{
 					return "What are you looking at?";
+				}
 				if (text.Length == 3)
+				{
 					container = chr;
+				}
 				if (text.Length == 5 && text[5 - 1] != null)
 				{
 					if (text[5 - 1] == "inventory")
+					{
 						container = chr;
+					}
 					else
+					{
 						container = FetchContainer(chr, text[5 - 1]);
+					}
 					if (container == null)
+					{
 						return $"I cannot find {text[5 - 1]}.";
+					}
 					if (text[4 - 1].ToLower() != "in")
+					{
 						return "What do you want to look in?";
+					}
 				}
 				return LookAtIn(thingId, container);
 			}
@@ -74,7 +92,9 @@ namespace MurderSim.Commands
 		{
 			GameObject thing = container.Locate(thingId);
 			if (thing == null)
+			{
 				return $"I cannot find {thingId}.";
+			}
 			return thing.FullDescription;
 		}
 	}

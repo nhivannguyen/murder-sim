@@ -7,14 +7,15 @@ namespace MurderSim.Objects
 {
 	public class God
 	{
-		private List<Item> _items = new List<Item>();
 		private readonly List<Location> _locations = new List<Location>();
-		private Player _p;
-
-		private List<Path> _paths = new List<Path>();
 
 		//this is the factory class : makes item
 		private readonly XmlDocument _theBible;
+
+		private List<Item> _items = new List<Item>();
+		private Player _p;
+
+		private List<Path> _paths = new List<Path>();
 
 		public God()
 		{
@@ -44,7 +45,7 @@ namespace MurderSim.Objects
 			XmlNode playerNode = _theBible.SelectSingleNode("//player");
 			_p = new Player(playerNode.Attributes["name"].Value, playerNode.Attributes["desc"].Value);
 			_p.Location = _locations.Find(
-				theLoc => theLoc.AreYou(playerNode.ParentNode.Attributes["id"].Value.Split('-').First())
+				theLoc => theLoc.AreYou(playerNode.ParentNode.Attributes["id"].Value.Split(',').First())
 			);
 		}
 
@@ -52,12 +53,14 @@ namespace MurderSim.Objects
 		{
 			XmlNodeList locationNodeList = _theBible.GetElementsByTagName("location");
 			foreach (XmlNode locationNode in locationNodeList)
+			{
 				_locations.Add(new Location
 				(
-					locationNode.Attributes["id"].Value.Split('-'),
+					locationNode.Attributes["id"].Value.Split(','),
 					locationNode.Attributes["name"].Value,
 					locationNode.Attributes["desc"].Value
 				));
+			}
 		}
 
 		private void CreatesItemsFromXml()
@@ -71,22 +74,26 @@ namespace MurderSim.Objects
 				{
 					_p.Inventory.Put(new Item
 					(
-						itemNode.Attributes["id"].Value.Split('-'),
+						itemNode.Attributes["id"].Value.Split(','),
 						itemNode.Attributes["name"].Value,
 						itemNode.Attributes["desc"].Value
 					));
 				}
 				else
 				{
-					string itemLocFirstId = itemLocNode.Attributes["id"].Value.Split('-').First();
+					string itemLocFirstId = itemLocNode.Attributes["id"].Value.Split(',').First();
 					foreach (Location aLoc in _locations)
+					{
 						if (aLoc.FirstId == itemLocFirstId)
+						{
 							aLoc.FindInventory().Put(new Item
 							(
-								itemNode.Attributes["id"].Value.Split('-'),
+								itemNode.Attributes["id"].Value.Split(','),
 								itemNode.Attributes["name"].Value,
 								itemNode.Attributes["desc"].Value
 							));
+						}
+					}
 				}
 			}
 		}
@@ -98,13 +105,14 @@ namespace MurderSim.Objects
 			{
 				foreach (Location aLoc in _locations)
 				{
-					if (aLoc.FirstId == npcNode.ParentNode.Attributes["id"].Value.Split('-').First())
+					if (aLoc.FirstId == npcNode.ParentNode.Attributes["id"].Value.Split(',').First())
 					{
 						NonPlayer npc = new NonPlayer(npcNode.Attributes["name"].Value, npcNode.Attributes["desc"].Value);
 						npc.Location = aLoc;
 						if (npcNode.Attributes["target"].Value == "yes")
 						{
 							npc.AddIdentifier("target");
+							_p.TargetList += $"> {npc.Name}, {npc.FullDescription}\r";
 						}
 					}
 				}
@@ -119,12 +127,12 @@ namespace MurderSim.Objects
 			{
 				foreach (Location aLoc in _locations)
 				{
-					hasPath = _locations.Find(l => l.AreYou(pathNode.ParentNode.Attributes["id"].Value.Split('-').First()));
+					hasPath = _locations.Find(l => l.AreYou(pathNode.ParentNode.Attributes["id"].Value.Split(',').First()));
 					if (aLoc.AreYou(pathNode.SelectSingleNode("destination").InnerText) && aLoc != hasPath)
 					{
 						hasPath.AddPath(new Path
 						(
-							pathNode.Attributes["direction"].Value.Split('-'),
+							pathNode.Attributes["direction"].Value.Split(','),
 							pathNode.Attributes["name"].Value,
 							pathNode.Attributes["desc"].Value,
 							aLoc

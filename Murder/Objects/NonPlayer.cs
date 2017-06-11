@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace MurderSim.Objects
+﻿namespace MurderSim.Objects
 {
 	public class NonPlayer : Character
 	{
@@ -30,7 +28,7 @@ namespace MurderSim.Objects
 
 		public string Talk(Character chr)
 		{
-			return $"{Name} said: I have nothing to say to you, {chr.Name}\r";
+			return $"! {Name} said: I have nothing to say to you, {chr.Name}\r";
 		}
 	}
 }

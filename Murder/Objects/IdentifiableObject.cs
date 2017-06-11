@@ -17,7 +17,9 @@ namespace MurderSim.Objects
 			get
 			{
 				if (_identifiers.Count != 0)
+				{
 					return _identifiers[0];
+				}
 				return "";
 			}
 		}

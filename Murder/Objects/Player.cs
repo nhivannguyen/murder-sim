@@ -27,6 +27,8 @@ namespace MurderSim.Objects
 			}
 		}
 
+		public string TargetList { get; set; }
+
 		public Player CreatePlayerFromXmlString(string XmlData)
 		{
 			XmlDocument playerXml = new XmlDocument();

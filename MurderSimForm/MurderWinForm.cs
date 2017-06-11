@@ -26,6 +26,7 @@ namespace MurderSimForm
 	        nameData.Text = _player.Name;
 	        locData.Text = $"{_player.Location.Name}, {_player.Location.Description}";
 	        invenData.Text = _player.Inventory.ItemList;
+	        targetData.Text = _player.TargetList;
         }
 
 		private void enterButt_Click(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace MurderSimForm
 			inputBox.Text = "";
 			locData.Text = $"{_player.Location.Name}, {_player.Location.Description}";
 			invenData.Text = _player.Inventory.ItemList;
+			targetData.Text = _player.TargetList;
 		}
 	}
 }

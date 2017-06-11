@@ -28,9 +28,18 @@ namespace MurderSim.Objects
 
 		public GameObject Locate(string id)
 		{
-			if (AreYou(id)) return this;
-			if (Inventory.HasItem(id)) return Inventory.Fetch(id);
-			if (GetPath(id) != null) return GetPath(id);
+			if (AreYou(id))
+			{
+				return this;
+			}
+			if (Inventory.HasItem(id))
+			{
+				return Inventory.Fetch(id);
+			}
+			if (GetPath(id) != null)
+			{
+				return GetPath(id);
+			}
 			return null;
 		}
 
@@ -47,8 +56,12 @@ namespace MurderSim.Objects
 		public Path GetPath(string pathId)
 		{
 			foreach (Path route in _paths)
+			{
 				if (route.AreYou(pathId))
+				{
 					return route;
+				}
+			}
 			return null;
 		}
 
@@ -61,7 +74,9 @@ namespace MurderSim.Objects
 		{
 			string result = "";
 			foreach (Path path in _paths)
-				result += $"+ a path {path.Name}, {path.FullDescription}\n ";
+			{
+				result += $"+ a path {path.Name} ({path.FirstId}), {path.FullDescription}\n ";
+			}
 			return result;
 		}
 
@@ -73,8 +88,12 @@ namespace MurderSim.Objects
 		public NonPlayer FindChar(string id)
 		{
 			foreach (NonPlayer character in PresentChar)
+			{
 				if (character.Name.ToLower() == id)
+				{
 					return character;
+				}
+			}
 			return null;
 		}
 
@@ -83,7 +102,14 @@ namespace MurderSim.Objects
 			string desc = "";
 			foreach (NonPlayer character in PresentChar)
 			{
-				desc += $"~ {character.Name}, {character.FullDescription}\r";
+				if (character.AreYou("target"))
+				{
+					desc += $"> {character.Name}, {character.FullDescription}\r";
+				}
+				else
+				{
+					desc += $"~ {character.Name}, {character.FullDescription}\r";
+				}
 			}
 			return desc;
 		}
@@ -92,7 +118,9 @@ namespace MurderSim.Objects
 		{
 			string greet = "";
 			foreach (NonPlayer npc in PresentChar)
-				greet += $"{npc.Name} said: {npc.Greet()}\r";
+			{
+				greet += $"! {npc.Name} said: {npc.Greet()}\r";
+			}
 			return greet;
 		}
 	}

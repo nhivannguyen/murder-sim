@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace MurderSim.Objects
 {
@@ -13,8 +14,13 @@ namespace MurderSim.Objects
 			get
 			{
 				string ListItem = "";
-				foreach (Item item in _items)
-					ListItem += "- " + item.ShortDescription + "\n ";
+				if (_items.Any())
+				{
+					foreach (Item item in _items)
+					{
+						ListItem += "- " + item.ShortDescription + "\n ";
+					}
+				}
 				return ListItem;
 			}
 		}
@@ -22,7 +28,9 @@ namespace MurderSim.Objects
 		public bool HasItem(string id)
 		{
 			foreach (Item item in _items)
+			{
 				return item.AreYou(id);
+			}
 			return false;
 		}
 
@@ -39,11 +47,13 @@ namespace MurderSim.Objects
 		public Item Take(string id)
 		{
 			foreach (Item item in _items)
+			{
 				if (item.AreYou(id))
 				{
 					_items.Remove(item);
 					return item;
 				}
+			}
 			return null;
 		}
 
@@ -51,8 +61,12 @@ namespace MurderSim.Objects
 		public Item Fetch(string id)
 		{
 			foreach (Item item in _items)
+			{
 				if (item.AreYou(id))
+				{
 					return item;
+				}
+			}
 			return null;
 		}
 	}

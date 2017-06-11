@@ -13,8 +13,14 @@ namespace MurderSim.Objects
 
 		public GameObject Locate(string id)
 		{
-			if (AreYou(id)) return this;
-			if (Inventory.HasItem(id)) return Inventory.Fetch(id);
+			if (AreYou(id))
+			{
+				return this;
+			}
+			if (Inventory.HasItem(id))
+			{
+				return Inventory.Fetch(id);
+			}
 			return null;
 		}
 
