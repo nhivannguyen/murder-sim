@@ -18,7 +18,9 @@ namespace MurderSim.Objects
 		public string Description { get; }
 
 		public override string FullDescription =>
-			$"You are at {Name}, {base.FullDescription}. \nThere are:\n {Inventory.ItemList}{PathDesc()}";
+			$"You are at {Name}, {base.FullDescription}. \nThere are:\n {Inventory.ItemList}" +
+			$"{PathDesc()}" +
+			$"{CharsDesc()}";
 
 		public Inventory Inventory { get; }
 
@@ -74,6 +76,16 @@ namespace MurderSim.Objects
 				if (character.Name.ToLower() == id)
 					return character;
 			return null;
+		}
+
+		public string CharsDesc()
+		{
+			string desc = "";
+			foreach (NonPlayer character in PresentChar)
+			{
+				desc += $"~ {character.Name}, {character.FullDescription}\r";
+			}
+			return desc;
 		}
 
 		public string UponEnter()

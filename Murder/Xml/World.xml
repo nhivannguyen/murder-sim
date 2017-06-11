@@ -39,6 +39,6 @@
     <path direction="down" name="to Level 1 of EN building" desc="an old elevator">
       <destination>enlvl1</destination>
     </path>
-    <npc name="Stress" desc="who looks terrified" />
+    <npc name="Stress" desc="who looks terrified" target="yes"/>
   </location>
 </world>

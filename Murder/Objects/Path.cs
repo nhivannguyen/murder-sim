@@ -4,7 +4,6 @@
 	{
 		public Path(string[] ids, string name, string desc, Location dest) : base(ids, name, desc)
 		{
-			dest.AddPath(this);
 			Destination = dest;
 		}
 

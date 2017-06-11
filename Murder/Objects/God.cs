@@ -100,7 +100,12 @@ namespace MurderSim.Objects
 				{
 					if (aLoc.FirstId == npcNode.ParentNode.Attributes["id"].Value.Split('-').First())
 					{
-						new NonPlayer(npcNode.Attributes["name"].Value, npcNode.Attributes["desc"].Value) {Location = aLoc};
+						NonPlayer npc = new NonPlayer(npcNode.Attributes["name"].Value, npcNode.Attributes["desc"].Value);
+						npc.Location = aLoc;
+						if (npcNode.Attributes["target"].Value == "yes")
+						{
+							npc.AddIdentifier("target");
+						}
 					}
 				}
 			}

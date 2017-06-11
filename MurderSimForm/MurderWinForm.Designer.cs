@@ -44,6 +44,7 @@
 			// inputBox
 			// 
 			this.inputBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.inputBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.inputBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.inputBox.Location = new System.Drawing.Point(12, 578);
 			this.inputBox.Multiline = true;
@@ -90,6 +91,7 @@
 			// dispBox
 			// 
 			this.dispBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.dispBox.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.dispBox.Location = new System.Drawing.Point(13, 13);
 			this.dispBox.Name = "dispBox";
 			this.dispBox.ReadOnly = true;
@@ -111,16 +113,16 @@
 			// 
 			// nameData
 			// 
-			this.nameData.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.nameData.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.nameData.Location = new System.Drawing.Point(886, 37);
 			this.nameData.Name = "nameData";
 			this.nameData.ReadOnly = true;
-			this.nameData.Size = new System.Drawing.Size(192, 31);
+			this.nameData.Size = new System.Drawing.Size(192, 29);
 			this.nameData.TabIndex = 8;
 			// 
 			// locData
 			// 
-			this.locData.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.locData.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.locData.Location = new System.Drawing.Point(886, 239);
 			this.locData.Multiline = true;
 			this.locData.Name = "locData";
@@ -130,7 +132,7 @@
 			// 
 			// invenData
 			// 
-			this.invenData.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.invenData.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.invenData.Location = new System.Drawing.Point(886, 415);
 			this.invenData.Multiline = true;
 			this.invenData.Name = "invenData";
@@ -150,7 +152,7 @@
 			// 
 			// targetData
 			// 
-			this.targetData.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.targetData.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.targetData.Location = new System.Drawing.Point(886, 105);
 			this.targetData.Multiline = true;
 			this.targetData.Name = "targetData";

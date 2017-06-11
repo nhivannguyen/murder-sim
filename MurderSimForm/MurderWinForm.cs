@@ -30,7 +30,7 @@ namespace MurderSimForm
 
 		private void enterButt_Click(object sender, EventArgs e)
 		{
-			dispBox.Text += $"{inputBox.Text} \r-> {_god.FulfillRequestTo(inputBox.Text, _player)}";
+			dispBox.Text += $"{inputBox.Text.ToUpper()} \r-> {_god.FulfillRequestTo(inputBox.Text, _player)}";
 			inputBox.Text = "";
 			locData.Text = $"{_player.Location.Name}, {_player.Location.Description}";
 			invenData.Text = _player.Inventory.ItemList;

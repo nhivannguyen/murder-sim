@@ -69,6 +69,7 @@
   <ItemGroup>
     <Compile Include="Commands\Cmd.cs" />
     <Compile Include="Commands\CmdController.cs" />
+    <Compile Include="Commands\HelpCmd.cs" />
     <Compile Include="Commands\LookCmd.cs" />
     <Compile Include="Commands\MoveCmd.cs" />
     <Compile Include="Commands\MurderCmd.cs" />
