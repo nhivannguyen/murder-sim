@@ -7,13 +7,7 @@ namespace MurderSim.Commands
 		public MoveCmd() : base(new[] {"move"})
 		{
 		}
-
-		public Path Path
-		{
-			get => default(Path);
-			set { }
-		}
-
+		
 		public override string Execute(Player chr, string[] text)
 		{
 			string direction = "";

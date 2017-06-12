@@ -77,7 +77,6 @@
     <Compile Include="Commands\TakeCmd.cs" />
     <Compile Include="Commands\TalkCmd.cs" />
     <Compile Include="Interfaces\IInventory.cs" />
-    <Compile Include="Objects\Bag.cs" />
     <Compile Include="Objects\Character.cs" />
     <Compile Include="Objects\GameObject.cs" />
     <Compile Include="Objects\God.cs" />
@@ -93,6 +92,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -103,7 +103,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Xml\Items.xml" />
     <Content Include="Xml\World.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

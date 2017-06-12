@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml;
 
 namespace MurderSim.Objects
@@ -6,6 +7,7 @@ namespace MurderSim.Objects
 	public class Player : Character
 	{
 		private Location _location;
+		private List<NonPlayer> _targets = new List<NonPlayer>();
 
 		public Player(string name, string desc) : base(name, desc)
 		{
@@ -14,8 +16,6 @@ namespace MurderSim.Objects
 		}
 
 		public override Inventory Inventory { get; }
-
-		//public new string FullDescription => $"You are {Name}, {FullDescription}.";
 
 		public override Location Location
 		{
@@ -27,14 +27,22 @@ namespace MurderSim.Objects
 			}
 		}
 
-		public string TargetList { get; set; }
-
-		public Player CreatePlayerFromXmlString(string XmlData)
+		public void ManageTarget(NonPlayer target)
 		{
-			XmlDocument playerXml = new XmlDocument();
-			playerXml.LoadXml(XmlData);
+			_targets.Add(target);
+		}
 
-			throw new NotImplementedException();
+		public string TargetList()
+		{
+			string list = "";
+			foreach (NonPlayer t in _targets)
+			{
+				if (!t.AreYou("dead"))
+				{
+					list += $"> {t.Name}, {t.FullDescription}";
+				}
+			}
+			return list;
 		}
 	}
 }

@@ -28,7 +28,7 @@ namespace MurderSim.Commands
 			set { }
 		}
 
-		public Cmd FindCmd()
+		private Cmd FindCmd()
 		{
 			foreach (Cmd cmd in _cmdList)
 			{

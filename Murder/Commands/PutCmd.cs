@@ -42,7 +42,7 @@ namespace MurderSim.Commands
 			return $"You have put {itemId} to {where}\r";
 		}
 
-		public IInventory FetchContainer(Player chr, string id)
+		private IInventory FetchContainer(Player chr, string id)
 		{
 			return chr.Locate(id) as IInventory;
 		}

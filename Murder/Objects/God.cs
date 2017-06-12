@@ -11,11 +11,8 @@ namespace MurderSim.Objects
 
 		//this is the factory class : makes item
 		private readonly XmlDocument _theBible;
-
-		private List<Item> _items = new List<Item>();
+		
 		private Player _p;
-
-		private List<Path> _paths = new List<Path>();
 
 		public God()
 		{
@@ -112,7 +109,7 @@ namespace MurderSim.Objects
 						if (npcNode.Attributes["target"].Value == "yes")
 						{
 							npc.AddIdentifier("target");
-							_p.TargetList += $"> {npc.Name}, {npc.FullDescription}\r";
+							_p.ManageTarget(npc);
 						}
 					}
 				}

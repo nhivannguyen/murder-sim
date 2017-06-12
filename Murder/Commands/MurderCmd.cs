@@ -21,6 +21,7 @@ namespace MurderSim.Commands
 					}
 					if (target.AreYou("target"))
 					{
+						target.AddIdentifier("dead");
 						p.Location.PresentChar.Remove(target);
 						return $"You have {input[1 - 1]}ed {input[2 - 1]}\r";
 					}

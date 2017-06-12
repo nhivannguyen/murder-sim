@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="MurderSim.Commands.Cmd">
+    <Position X="12.25" Y="3.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Cmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Commands.CmdController" Collapsed="true">
+    <Position X="46.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAABAAAAAAAAAAAAAAAJAAACAA=</HashCode>
+      <FileName>Commands\CmdController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Commands.HelpCmd">
+    <Position X="8.25" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\HelpCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Commands.LookCmd">
+    <Position X="18.75" Y="5.75" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Commands\LookCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Commands.MoveCmd">
+    <Position X="0.5" Y="5.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\MoveCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Commands.MurderCmd">
+    <Position X="11.75" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\MurderCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Commands.PutCmd">
+    <Position X="23.25" Y="5.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Commands\PutCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Commands.TakeCmd">
+    <Position X="4.25" Y="5.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Commands\TakeCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Commands.TalkCmd">
+    <Position X="15.25" Y="5.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\TalkCmd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Objects.Character">
+    <Position X="29" Y="6.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAgQAAAI=</HashCode>
+      <FileName>Objects\Character.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MurderSim.Objects.GameObject">
+    <Position X="34.75" Y="3.75" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAQAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\GameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Objects.God" Collapsed="true">
+    <Position X="48.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAACAAAAEAAAIAUACAAIAAAAAEABAAAAAAAA=</HashCode>
+      <FileName>Objects\God.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Objects.IdentifiableObject">
+    <Position X="21.75" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAABAAgAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\IdentifiableObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Objects.Inventory" Collapsed="true">
+    <Position X="46.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAEAgAAAABAAAAAAAAEAAAAAAAg=</HashCode>
+      <FileName>Objects\Inventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Objects.Item">
+    <Position X="38.5" Y="6.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Item.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Objects.Location">
+    <Position X="42.5" Y="6.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAiIABAAAAEAAQAABASAgAAAAAAAgQAAAI=</HashCode>
+      <FileName>Objects\Location.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MurderSim.Objects.NonPlayer">
+    <Position X="27.25" Y="9.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAGAAAgAAAAA=</HashCode>
+      <FileName>Objects\NonPlayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Objects.Path">
+    <Position X="34" Y="6.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Objects\Path.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MurderSim.Objects.Player">
+    <Position X="30.75" Y="9.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAAACAAAgAAAAA=</HashCode>
+      <FileName>Objects\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="MurderSim.Interfaces.IInventory" Collapsed="true">
+    <Position X="46.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAI=</HashCode>
+      <FileName>Interfaces\IInventory.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
