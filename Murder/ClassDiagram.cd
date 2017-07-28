@@ -129,9 +129,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="MurderSim.Objects.Player">
-    <Position X="30.75" Y="9.5" Width="2.5" />
+    <Position X="30.75" Y="9.5" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAAACAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAQAAAAAAAACAgAgAAACA=</HashCode>
       <FileName>Objects\Player.cs</FileName>
     </TypeIdentifier>
   </Class>

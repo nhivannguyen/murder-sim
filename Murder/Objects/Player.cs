@@ -39,7 +39,7 @@ namespace MurderSim.Objects
 			{
 				if (!t.AreYou("dead"))
 				{
-					list += $"> {t.Name}, {t.FullDescription}";
+					list += $"\n> {t.Name}\r";
 				}
 			}
 			return list;

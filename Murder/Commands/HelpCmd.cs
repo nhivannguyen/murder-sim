@@ -39,13 +39,20 @@ namespace MurderSim.Commands
 							return "MOVE COMMAND LISTS\r" +
 							       "~> move <path-direction> : move yourself to the destination of the path\r";
 						case "take":
-							return "TAKE COMMAND LIST\r";
+							return "TAKE COMMAND LIST\r" +
+							       "~> take <item> : retrieve item from your inventory\r" +
+							       "~> take <item> from <location> : retrieve item from location and add to your inventory\r";
 						case "look":
-							return "LOOK COMMAND LIST\r";
+							return "LOOK COMMAND LIST\r" +
+							       "~> look around : see what your location has\r" +
+							       "~> look at <object> \r" +
+							       "~> look at <item> in <location> : get details of the item at that location\r";
 						case "talk":
-							return "TALK COMMAND LIST\r";
+							return "TALK COMMAND LIST\r" +
+							       "~> talk to <someone> : communicate with an NPC\r";
 						case "murder":
-							return "MURDER COMMAND LIST\r";
+							return "MURDER COMMAND LIST\r" +
+							       "~> murder <someone> : remove them from the world\r";
 					}
 				}
 			}

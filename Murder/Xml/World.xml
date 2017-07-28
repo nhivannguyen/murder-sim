@@ -39,6 +39,88 @@
     <path direction="down" name="to Level 1 of EN building" desc="an old elevator">
       <destination>enlvl1</destination>
     </path>
-    <npc name="Stress" desc="who looks terrified" target="yes" />
+    <path direction="up" name="to Level 3 of EN building" desc="an old elevator">
+      <destination>enlvl3</destination>
+    </path>
+    <npc name="Jay" desc="who is sleeping on the floor" target="no" />
   </location>
+  
+  <location name="EN Building Level 3" desc="that Swinburne building for engineer" id="enlvl3">
+    <path direction="down" name="to Level 2 of EN building" desc="an old elevator">
+      <destination>enlvl2</destination>
+    </path>
+    <path direction="up" name="to Level 4 of EN building" desc="an old elevator">
+      <destination>enlvl4</destination>
+    </path>
+    <npc name="Paul" desc="who is staring at a map" target="yes" />
+  </location>
+
+  <location name="EN Building Level 4" desc="that Swinburne building for engineer" id="enlvl4">
+    <path direction="down" name="to Level 3 of EN building" desc="an old elevator">
+      <destination>enlvl3</destination>
+    </path>
+    <path direction="up" name="to Level 5 of EN building" desc="an old elevator">
+      <destination>enlvl5</destination>
+    </path>
+    <inventory>
+      <item 
+        id="chair"
+        name="chair"
+        desc="that red plastic circle thing"/>
+    </inventory>
+  </location>
+
+  <location name="EN Building Level 5" desc="that Swinburne building for engineer" id="enlvl5">
+    <path direction="down" name="to Level 4 of EN building" desc="an old elevator">
+      <destination>enlvl4</destination>
+    </path>
+    <path direction="left" name="to EN515 lecture theatre" desc="a hallway">
+      <destination>en515front</destination>
+    </path>
+    <inventory>
+      <item
+        id="chair"
+        name="chair"
+        desc="that red plastic circle thing"/>
+    </inventory>
+  </location>
+
+  <location name="In front of EN515" desc="that empty space outside a lecture theatre" id="en515front">
+    <path direction="right" name="to starting point of level 5" desc="a hallway">
+      <destination>enlvl5</destination>
+    </path>
+    <path direction="left" name="to EN508 rooms" desc="a small hallway with rooms on both sides">
+      <destination>en508</destination>
+    </path>
+  </location>
+
+  <location name="EN508" desc="the section of EN508a-e" id="en508">
+    <path direction="right" name="to EN508e" desc="a doorway">
+      <destination>en508e</destination>
+    </path>
+    <path direction="left" name="to EN508a" desc="a doorway">
+      <destination>en508a</destination>
+    </path>
+  </location>
+
+  <location name="EN508a" desc="Karola's room" id="en508a">
+    <path direction="back" name="to hallway of EN508" desc="a hallway">
+      <destination>en508</destination>
+    </path>
+    <npc name="Karola" desc="the lovely and friendly convenor of UCD" target="no"/>
+  </location>
+
+  <location name="EN508e" desc="Chris's room" id="en508e">
+    <path direction="back" name="to hallway of EN508" desc="a hallway">
+      <destination>en508</destination>
+    </path>
+    <npc name="Christopher" desc="the convenor of OOP" target="yes"/>
+    <inventory>
+      <item
+        id="mark"
+        name="your mark"
+        desc="that thing you want to burn down"/>
+    </inventory>
+  </location>
+
 </world>

@@ -17,7 +17,7 @@ namespace MurderSim.Objects
 		public God()
 		{
 			_theBible = new XmlDocument();
-			_theBible.Load("D:/OOP/oh-oh-pee/Murder/Murder/Xml/World.xml"); //TODO: change the path
+			_theBible.Load("D:/OOP/oh-oh-pee/Murder/Murder/Xml/World.xml");
 
 			CreatesLocationsFromXml();
 			CreatesPlayerFromXml();
